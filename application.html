@@ -1,0 +1,164 @@
+ <!DOCTYPE html>
+
+<html>
+<head>
+	<!--CSS code links-->
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		html, body {margin: 0; height: 100%; overflow: auto}
+	</style>
+
+	<title>Dashboard Business Idea List Manager</title>
+</head>
+
+<body>
+
+<div class="main">
+	<div class="content">
+
+		<!-- NAV MENU ------------------------------------------------------------------------------->
+        <div class="topNav">
+            <div class="container-fluid">
+            	<!-- <h1 id="navLogo">Idea Manager</h1> -->
+            	<img src="images/monogram.svg" width="50" height="50"> 
+                <ul class="rightNavigation"> 
+                   	<li><a class="active" href="application.html">Dashboard</a></li>
+                    <li><a href="account.html"><span class="glyphicon glyphicon-cog"></a></li>
+                    <li><a href="index.html">Logout</a></li>
+                </ul> 
+            </div>    
+        </div>   
+
+        <!-- MAIN INTERFACE -------------------------------------------------------------------------->      
+		<div class="main-interface">
+
+			<!-- Add Idea Section -------------------------------------------------------------------->
+			<div class="addIdea">
+				<div class="addIdeaBar">
+					<div id="formAddIdea">
+						<input id="enterIdea" placeholder="Add an idea" type="text">
+						<button id="btnSubmit" type="button">
+							<img src="images/submit.svg" height="20" width="20">
+	      				</button>
+					</div>
+				</div>
+				
+				<!-- Idea List Items, JS Generated -------------------------------------------------------------------->
+				<div>
+					<ul class="anIdea"></ul>
+				</div>	
+				<!--------------------------------------------------------------------------------->
+
+			</div>
+
+			<!-- Plan Note-Taking Input Section -------------------------------------------------->
+			<div class="planningSidebar">
+				<div class="sidebarSections">
+					<div class="sidebarHeader">
+						<h2 class="sideNameHeader">MY PLAN<button class="deleteIdea" type="button"><img src="images/garbage.svg" height="25" width="25"></button></h2>
+					</div>
+					<div class="summarySection" id="eachSection">
+						<h3>Summary</h3>
+						<textarea class="execSum" id="textEachSection" placeholder="What is the fundamental purpose of this business? What is your idea about? " type="text"></textarea>		
+					</div>
+					<hr id="seperatorSections">
+					<div class="missionSection" id="eachSection">
+						<h3>Mission and Vision</h3>
+						<textarea class="misState" id="textEachSection" placeholder="What is the ultimate goal of this business idea? What contribution are you making to your industry or niche?" type="text"></textarea>	
+					</div>
+					<hr id="seperatorSections">
+					<div class="namesSection" id="eachSection">
+						<h3>Brainstorm Names</h3>
+						<textarea id="textEachSection" id="textEachSection" placeholder="What name ideas do you have for your business? Is the domain name and extension available?" type="text"></textarea>	
+					</div>
+					<hr id="seperatorSections">
+					<div class="businessModelSection" id="eachSection">
+						<h3>Business Model</h3>
+						<textarea id="textEachSection" id="textEachSection" placeholder="How will you conduct business? What methods, tactics and strategies will you use?" type="text"></textarea>	
+					</div>
+					<hr id="seperatorSections">
+					<div class="prodServicesSection" id="eachSection">
+						<h3>Products and Services</h3>
+						<textarea id="textEachSection" id="textEachSection" placeholder="What products and/or services will you offer? Is it a product-based business? Is it an agency or service-based business?" type="text"></textarea>	
+					</div>	
+					<hr id="seperatorSections">
+					<div class="competitionSection" id="eachSection">
+						<h3>Competition</h3>
+						<textarea id="textEachSection" id="textEachSection" placeholder="Who are your foremost competitors? What are they doing that you can do better? What don’t they offer that you can?" type="text"></textarea>	
+					</div>	
+					<hr id="seperatorSections">
+					<div class="markSection" id="eachSection">
+						<h3>Marketing</h3>
+						<textarea id="textEachSection" id="textEachSection" placeholder="How will you market and promote your products and/or services? What digital marketing ideas do you have?" type="text"></textarea>	
+					</div>						
+					<hr id="seperatorSections">
+					<div class="brandingSection" id="eachSection">
+						<h3>Branding</h3>
+						<textarea id="textEachSection" id="textEachSection" placeholder="How will your business look? What is the visual style you will use online? What platforms will you use to promote your business?" type="text"></textarea>	
+					</div>
+					<hr id="seperatorSections">
+					<div class="uspSection" id="eachSection">
+						<h3>Unique Selling Points</h3>
+						<textarea id="textEachSection" id="textEachSection" placeholder="What are your unique selling points? What will you do better than your competitors? How will you differentiate your offerings from you competitors?" type="text"></textarea>	
+					</div>						
+					<hr id="seperatorSections">
+					<div class="financeSection" id="eachSection">
+						<h3>Finance</h3>
+						<textarea id="textEachSection" id="textEachSection" placeholder="How much will it cost to get started? How will you generate revenue? What are your revenue targets? Will you be getting additional funding?" type="text"></textarea>	
+					</div>
+					<hr id="seperatorSections">
+					<div class="swotSection" id="eachSection">
+						<h3>SWOT</h3>
+						<textarea id="textEachSection" id="textEachSection" placeholder="What are your strengths, weaknesses, opportunities and threats?" type="text"></textarea>	
+					</div>					
+					<hr id="seperatorSections">
+					<div class="goalsSection" id="eachSection">
+						<h3>Goals</h3>
+						<textarea id="textEachSection" id="textEachSection" placeholder="What do you plan to achieve in the short-term, medium-term and long-term?" type="text"></textarea>	
+					</div>	
+					<hr id="seperatorSections">
+					<div class="targMarkSection" id="eachSection">
+						<h3>Target Market</h3>
+						<textarea id="textEachSection" id="textEachSection" placeholder="Who will you sell your products and/or services too? What market are you entering? Do you have a monopolised niche?" type="text"></textarea>	
+					</div>
+					<hr id="seperatorSections">
+					<div class="custProfSection" id="eachSection">
+						<h3>Ideal Customer Profile</h3>
+						<textarea id="textEachSection" id="textEachSection" placeholder="Who is your ideal customer? What are their demographics i.e. income, class, background, occupation, interests, pain points, aspirations etc.?" type="text"></textarea>	
+					</div>							
+					<hr id="seperatorSections">
+					<div class="manageTeamSection" id="eachSection">
+						<h3>Management and Teams</h3>
+						<textarea id="textEachSection" id="textEachSection" placeholder="Do you intend to hire people? Who will be helping you conduct business? Who is part of your start-up team?" type="text"></textarea>	
+					</div>
+					<hr id="seperatorSections">
+					<div class="pivOptionsSection" id="eachSection">
+						<h3>Pivot Options</h3>
+						<textarea id="textEachSection" id="textEachSection" placeholder="What will you do if your business model doesn’t work? What changes will you make to your idea and its products and/or services?" type="text"></textarea>	
+					</div>						
+					<hr id="seperatorSections">
+					<div class="exitSection" id="eachSection">
+						<h3>Exit Strategy</h3>
+						<textarea id="textEachSection" id="textEachSection" placeholder="What is your end goal when you have achieved desired results? Do you intend to sell the business or will you continue managing it? Will you hire new management?" type="text"></textarea>	
+					</div>	
+				</div>
+			</div>	
+			<!--------------------------------------------------------------------------------->
+
+		</div>		
+	</div>
+</div>
+
+	<!--Script code links-->
+	<script src="https://code.jquery.com/jquery.js"></script> 
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+	<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>	
+	<script src="scripts/script.js" type="text/javascript"></script>
+</body>
+</html>

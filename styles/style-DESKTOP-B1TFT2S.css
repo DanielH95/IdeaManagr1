@@ -1,0 +1,838 @@
+/* ---- TEXT, FONT and RELATED ---- */
+
+h3 {
+    font-family: helvetica, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #357CC5;
+    font-weight: bold;
+}
+
+body {
+    font-family: helvetica;
+}
+
+textarea {
+    font-family: helvetica;
+}
+
+
+/* ---- NAVIGATION CSS CODE ---- */
+
+    .topNav {
+        background-color: #5795D5;
+        overflow: hidden; 
+    }
+
+                .topNav a {
+                    float: right;
+                    color: #FFFFFF;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    font-size: 18px;
+                    transition: all 0.7s;
+                        -webkit-transition: all 0.7s;
+                        -moz-transition: all 0.7s;
+                }
+
+                .topNav a:hover {
+                    background-color: #357CC5;
+                    color: white;
+                    text-decoration: none;
+                    transition: all 0.7s;
+                        -webkit-transition: all 0.7s;
+                        -moz-transition: all 0.7s;
+                }
+
+                .topNav a.active {
+                    background-color: #427AB4;
+                    color: white;
+                }
+
+            .rightNavigation {
+                list-style-type: none;
+                display: inline-flex;
+                text-align: center;
+                float: right;
+                margin: 0%;
+            }
+
+/*    .container-fluid, .navbar-header, .navbar-brand {
+        display: flex;    
+    }*/
+
+
+/* 
+........... MAIN DASHBOARD PAGE ...........
+*/
+
+
+    /* ---- IDEA LIST CSS CODE ---- */
+
+.main {
+    flex-wrap: wrap;
+}
+
+    .content {
+
+    }
+
+        .main-interface {
+            display: flex; /* THIS IS CAUSING THE VERTICAL SCROLL ISSUE AND TABLE BOTTOM BORDER */
+            float: left; /* Check this. Maybe it should be set for .addIdea */
+            width: 100%;
+            height: 100%;
+            position: fixed; /* THIS IS CAUSING THE VERTICAL SCROLL ISSUE AND TABLE BOTTOM BORDER */
+            overflow: auto;
+            height: calc(100% - 50px); /* THIS IS CAUSING THE VERTICAL SCROLL ISSUE AND TABLE BOTTOM BORDER */
+            background-color: white;
+        }   
+                    
+
+            .addIdea {                         
+                width: 60%;
+                overflow-x: auto;
+                background-color: white;
+                margin: 1%;
+                margin-bottom: 0%;
+                align-items: flex-start;
+                box-shadow: 0px 0px 3px #808080;
+            }
+
+
+                .addIdeaBar {
+                    width: 100%;
+                    overflow-x: auto;
+                    padding-top: 1%;
+                    padding-bottom: 1%;
+                    background-color: white;
+                    box-shadow: 2px 1px 5px #808080;
+                    position: -webkit-sticky;
+                    position: sticky;
+                    top: 0rem;
+                }
+
+                .addIdeaBar:hover {
+                    background-color: #F5F5F5;
+                    transition-duration: 0.30s;
+                }
+
+                    #formAddIdea {
+                        width: 100%;
+                        position: -webkit-sticky;
+                        position: sticky;
+                        top: 0;                  
+                    }
+
+                    #enterIdea {
+                        width: 92%;
+                        margin-left: 1%; 
+                        padding: 1%;
+                        background: none;
+                        border: none;
+                        outline: none;
+                    }
+
+                    #btnSubmit {
+                        width: 0%;
+                        padding: 0%;
+                        background: none;
+                        border: none;
+                        outline: none;
+                    }
+
+                        #btnSubmit:hover {
+                            transform: scale(1.1);
+                            transition-duration: 0.30s;
+                        }
+
+                .anIdea {
+                    margin-left: 0%;
+                    padding-left: 0%;
+                    margin-right: 0%;
+                    padding-right: 0%;
+                    }
+
+                    .anIdea li {
+                        flex-direction: column;
+                        list-style-type: none;
+                        font-size: 14pt;
+                        padding-top: 1%;
+                        padding-bottom: 1%;
+                        line-height: 40px;
+                        text-indent: 15px;
+                        border-bottom: 2px solid #F0F0F0; 
+                        list-style-position:inside;
+                        text-overflow: ellipsis; 
+                        white-space: nowrap;
+                        overflow: hidden;
+                        display: inline-block;
+                        display: list-item;
+                        outline: none;
+                        }
+
+                        .anIdea li:hover {
+                            background-color: #98BCDE;
+                        }
+
+                        .anIdea li.active {
+                            background-color: #98BCDE;
+                            padding-top: 15px;
+                            padding-bottom: 15px;
+                        }
+
+        /* ---- PLANNING SIDEBAR CSS CODE ---- */
+
+        .planningSidebar {
+            background-color: white;    
+            overflow-y: auto;
+            overflow-x: hidden;
+            margin: 1%;
+            margin-bottom: 0%;
+            float: right;
+            width: 60%;
+            box-shadow: 0px 0px 3px #808080;           
+        }
+
+            .sidebarHeader {
+                display: inline-block;
+                padding: 1%;
+                background-color: #A8C5E3;
+                /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);*/
+                box-shadow: 2px 1px 5px #808080;
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0rem;
+            }
+
+                .sideNameHeader {
+                    float: left;
+                    width: 100%;
+                    color: white;
+                }
+
+                .deleteIdea {
+                    float: right;
+                    background: none;
+                    border: none;
+                    outline: none;          
+                }
+
+                    .deleteIdea:hover {
+                        transform: scale(1.1);
+                        transition-duration: 0.30s;
+                    }
+
+
+            .sidebarSections {
+                display: flex;
+                flex-direction: column;
+            }
+                    
+                .sidebarSections h3 {
+                    font-family: helvetica, sans-serif;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    color: #357CC5;
+                    /*font-weight: bold;*/
+                }
+
+            /* Input text elements for planning sidebar */    
+
+        #seperatorSections {
+            width: 100%;
+            height: 2px;
+            background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.75), rgba(0,0,0,0.1));
+            max-width: 100%; /* fix for mobile compatibility */
+        }
+         
+        #eachSection, #seperatorSections, textarea {
+            transition: all 0.30s ease-in-out;
+        }
+
+        #eachSection:focus, #seperatorSections:focus, textarea:focus {
+            height: 15em;
+            -webkit-transition: all 0.30s ease-in-out;
+            -moz-transition: all 0.30s ease-in-out;
+            -ms-transition: all 0.30s ease-in-out;
+            -o-transition: all 0.30s ease-in-out;
+            box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+            padding: 3px 0px 3px 3px;
+            margin: 5px 1px 3px 0px;
+            border: 1px solid rgba(81, 203, 238, 1);
+        }    
+
+            #eachSection {
+                width: 100%;
+                background-color: transparent;
+                padding: 25px;
+/*                border-bottom: solid 1px;*/
+
+            }
+
+                #textEachSection {
+                    width: 100%;              
+                    background-color: transparent;
+                    border: none;
+                    resize: none;
+                    outline: none;
+                    overflow: auto;
+                }
+
+/* 
+........... ONE-PAGE LANDING HOMEPAGE ...........
+*/
+
+    /* ---- HOMEPAGE: TOP NAVIGATION ---- */
+
+
+    /* ---- HOMEPAGE: FIRST MAIN BANNER ---- */        
+
+    .jumbotron {
+        padding-left: 15%;
+        padding-right: 15%;   
+        display: flex;
+        text-align: center;
+        background-color: #D1E8FF;
+    }
+
+    .jumbotronIntro {
+        width: 100%;
+                
+    }
+
+    .jumbotronButton {
+               
+    }
+
+    /* ---- HOMEPAGE: FEATURES ---- */
+
+    .jumbotronFeatures {
+        background-color: #357CC5;
+        padding: 2%;
+        color: white;
+        text-align: center;
+    }
+
+        .containerFeatures > p {
+            font-size: 16px;
+            padding-top: 0%;
+            padding-left: 20%;
+            padding-right: 20%;   
+        }
+
+            .homepageSteps {
+                display: grid;
+                display: inline-block;
+                padding: 2.5%;             
+            }
+
+                #desktopSVG {
+                    width: 180px; 
+                    height: 180px;
+                }
+
+
+                #ideaBulbSVG {
+                    width: 180px; 
+                    height: 180px;                  
+                }
+
+
+                #planningSVG {
+                    width: 180px; 
+                    height: 180px;
+                }
+
+
+    /* ---- HOMEPAGE: WHY ---- */
+
+    .jumbotronWhy {
+        background-color: #5795D5;
+        padding: 0px;
+        text-align: center;
+
+    }
+
+        .containerWhy {
+            display: inline-flex;
+            text-align: center;                   
+        }
+
+            .benefitsOfApp {
+                text-align: center;
+                margin: 5%;
+                color: white;
+                font-size: 16px; 
+            }
+
+            .benefitsOfApp img:hover {
+                transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+            }
+
+
+    /* ---- HOMEPAGE: UPCOMING FEATURES ---- */
+
+    .jumbotronWhatsComing {
+        background-color: white;
+        padding: 1.2%;
+        color: black;
+        text-align: center;
+    }
+
+        .containerWhatsComing {     
+        }
+
+            .listContainer {
+            }
+
+                .comingSoon {
+                    list-style-type: none;
+                }
+
+    /* ---- HOMEPAGE: CTA ---- */
+
+    .jumbotronFinalCTA {
+        background-color: #D1E8FF;
+        padding: 4%;
+        text-align: left;
+    }
+
+        .containerFinalCTA {
+            display: grid;
+            grid-template-columns: auto auto auto auto; /* https://www.w3schools.com/css/css_grid_container.asp */
+            padding-left: 20%;
+        }
+
+            .finalCTAText {
+                float: left;
+                padding: 1%;
+                font-size: 20px;
+            }
+
+            .jumbotronButtonCTA {
+                float: right;
+                padding: 0%;
+            }
+
+
+
+    /* ---- HOMEPAGE: FOOTER ---- */
+
+    .jumbotronFooter {
+        background-color: #FFFFFF;
+    }
+
+            .soMediaLink {
+                    display: inline-block;
+                    padding: 5px;
+                    height: 50px;
+                    width: 50px;
+                    margin: auto;
+                    vertical-align: middle;
+            }
+
+            .copyrightStatement {
+                text-align: center;
+                padding: 2%;
+            }
+
+            
+
+
+/* 
+........... LOGIN PAGE ...........
+*/
+
+    /* ---- LOGIN FORM ---- */
+
+    .loginContainer {
+        padding-bottom: 100px;
+    }
+
+    #forgotYourDetails {
+        margin-top: 40px;
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    .loginContainer .form-control {
+        display: block;
+        text-align: center;
+        height: 50px;
+        width: 500px;
+        font-size: 20px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+    .loginContainer .btn {
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        width: 140px;
+        height: 40px;
+        text-transform: uppercase;
+    }
+
+    .loginContainer .form-check-label {
+        padding-top: 20px;
+    }
+
+    .loginContainer #seperator {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        width: 400px;
+        height: 2px;
+        background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.75), rgba(0,0,0,0.1));
+        max-width: 90%; /* fix for mobile compatibility */
+    }
+
+    .loginContainer .registerNew p {
+        font-size: 16px;
+    }
+
+    .loginContainer .registerNew a {
+        font-weight: bold;
+    }
+
+    .loginContainer .registerNew p span {
+        font-weight: bold;
+    }
+
+
+/* 
+........... REGISTRATION PAGE ...........
+*/
+
+    /* ---- REGISTRATION FORM ---- */
+
+    .registerContainer {
+        padding-top: 25px;
+        padding-bottom: 50px;
+    }
+
+        .registerFormGroup {
+            display: inline-block;
+            text-align: center;
+            height: 50px;
+            width: 500px;
+            margin-bottom: 20px;
+        }    
+
+            .registerFormGroup .form-control {
+                text-align: center;
+                height: 50px;
+                width: 500px;
+                font-size: 20px;
+                margin-bottom: 20px;
+            }    
+
+            #registerBtn {
+                font-size: 16px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                width: 150px;
+                height: 40px;
+                text-transform: uppercase;
+            }
+
+            .form-check {
+                margin-top: 45px;
+                margin-bottom: 45px;
+                width: 100%;
+            }
+
+            #registerSeperator {
+                margin-top: 60px;
+                margin-bottom: 40px;
+                width: 400px;
+                height: 2px;
+                background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.75), rgba(0,0,0,0.1));
+                max-width: 90%; /* fix for mobile compatibility */    
+            }
+
+/* 
+........... CONTACT PAGE ...........
+*/
+
+    /* ---- MAIN CONTAINER ---- */
+
+    .contactContainer #seperator {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        width: 400px;
+        height: 2px;
+        background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.75), rgba(0,0,0,0.1));
+        max-width: 90%; /* fix for mobile compatibility */
+    }
+
+        /* ---- MESSAGE BOX ---- */
+
+        #messageBox {
+            padding: 0;
+            float: left;
+        }
+
+            #messageBox .well {
+                margin-right: 5%;
+                background-color: white;
+                box-shadow: 0px 0px 2px 3px #CAE1F8;
+                border-radius: 0.5%
+            }
+
+            #messageBox .form-horizontal {
+                background-color: #D1E8FF;
+                padding: 5px;
+                border-radius: 0.5%;
+            }
+
+            #messageBox .inputLabel {
+                text-align: center;
+                font-weight: bold;
+                margin: inherit;
+            }
+
+            #messageBox .col-md-9 {
+                width: 100%;
+            }
+
+            #messageBox textarea {
+                text-align: left;
+                font-size: 14px;
+            }
+
+        /* ---- CONTACT DETAILS ---- */
+
+        .contactDetails {
+            float: right;
+            width: 50%;
+            height: 50%;
+            padding: 2%;
+        }
+
+            .contactDetails .contactSections {
+
+            }
+
+            .contactDetails .contactMethod {
+                margin: inherit;
+                padding-bottom: 5%;
+            }
+
+            .contactDetails .seperatorContacts {
+                margin-top: 10px;
+                margin-bottom: 15px;
+                width: 300px;
+                height: 1px;
+                background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.75), rgba(0,0,0,0.1));
+                max-width: 90%; /* fix for mobile compatibility */
+            }
+
+/* 
+........... ABOUT PAGE ...........
+*/
+
+    /* ---- ABOUT CONTENT ---- */
+
+    .pageBanner {
+        text-align: center;
+        padding: 75px;
+        background-color: white;
+    }
+
+    .pageBanner #seperatorBanner {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        width: 400px;
+        height: 2px;
+        background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.75), rgba(0,0,0,0.1));
+        max-width: 90%; /* fix for mobile compatibility */
+    }
+
+    .aboutContent {
+        text-align: center;
+        padding: 25px;
+    }
+
+    .aboutContent #seperator {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        width: 400px;
+        height: 2px;
+        background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.75), rgba(0,0,0,0.1));
+        max-width: 90%; /* fix for mobile compatibility */
+    }
+
+
+/* 
+........... FEATURES PAGE ...........
+*/
+
+    /* ---- FEATURES CONTENT ---- */
+
+    .planContainer .row {
+        width: 100%;
+    }
+
+        /* ---- PLAN CARDS ---- */
+
+        .planContainer .col-sm {
+            display: inline-block;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 2px 3px #5795D5;
+            margin: 50px;
+            border-radius: 1%;
+            width: 20%;
+        }
+
+            .planContainer .col-sm .btn {
+                margin-top: 20%;
+                margin-bottom: 15%;
+            }
+
+        .planContainer #middleCard {
+            background-color: #5795D5;
+            color: white;
+            box-shadow: 0px 0px 2px 3px white;
+        }
+
+            #middleCard small {
+                color: #4d4d4d;
+            }
+
+            #middleCard .btn {
+                background-color: #333333;
+            }
+
+        .planContainer .col-sm h4 {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .planContainer .col-sm:hover {
+            transform: scale(1.1);
+        }
+
+        .planContainer .card-title {
+            padding-bottom: 30px;
+        }
+
+
+/* 
+........... ACCOUNT PAGE ...........
+*/
+
+    .accountContent {
+        padding: 20px;
+        margin: 20px;
+        font-size: 0;
+    }
+
+    .account-interface {
+        float: center;
+        width: 65%;
+        margin: 0 auto;
+        box-shadow: 0px 0px 5px #427AB4;
+    }
+
+    .settingsNav {
+        height: 100%;
+        width: 100%;
+        text-align: left;
+        margin: auto;
+    }
+
+    .settingsNav .btnSetting {
+        background: #A8C5E3;
+        color: white;
+        width: 25%;
+        height: 50px;
+        font-weight: bold;
+        font-size: 18px;
+        display: inline-block;
+        border: none;
+        letter-spacing: 2px;
+        overflow: hidden;
+        outline: none;
+        transition: all 0.7s;
+            -webkit-transition: all 0.7s;
+            -moz-transition: all 0.7s;
+    }
+
+    .settingsNav .btnSetting:hover {
+        background-color: white;
+        color: #357CC5;
+        transition: all 0.7s;
+            -webkit-transition: all 0.7s;
+            -moz-transition: all 0.7s;
+        border: none;
+    }
+
+    .settingsNav .selected {
+        background-color: #5795D5;
+        color: white;
+        text-transform: uppercase;
+        border: none;
+    }
+
+    .optionsBox {
+        font-size: 16px;
+        background-color: white;
+        color: #357CC5;
+    }
+
+    .optionsBox .optionsTitleContainer {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+        background-color: #5795D5;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 20px;
+        padding-left: 5%;
+        overflow: hidden;
+        border: none;
+    }
+
+    .optionsBox .optionsTitleContainer h2 {
+        letter-spacing: 15px;
+        font-size: 35px;
+        transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+    }
+
+    .optionsBox .optionsTitleContainer h2:hover {
+        transform: scale(1.03);
+        transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+    }
+
+    .optionsBox .optionSections {
+        padding: 3%;
+        height: 695px;
+        overflow: auto;
+        text-align: center;
+    }
+
+    .optionSections .section {
+        font-weight: bold;
+        margin: 3%;
+    }
+
+    .optionSections .section p {
+        padding: 1%;
+    }
+
+    .optionSections .section .form-row .col {
+        display: inline-block;
+        padding: 0.5%;
+    }
+
+    .optionSections .section .form-control {
+        width: auto;
+    }

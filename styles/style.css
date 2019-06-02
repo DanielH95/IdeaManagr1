@@ -1,0 +1,407 @@
+/* ---- TEXT, FONT and RELATED ---- */
+
+h3 {
+    font-family: helvetica, sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #357CC5;
+    font-weight: bold;
+}
+
+body {
+    font-family: helvetica;
+}
+
+textarea {
+    font-family: helvetica;
+}
+
+
+/* ---- NAVIGATION CSS CODE ---- */
+
+.topNav {
+    background-color: #5795D5;
+    overflow: hidden; 
+}
+
+/*#navLogo {
+    display: inline;
+    padding-top: 0%;
+}*/
+
+.topNav a {
+    float: right;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.7s;
+        -webkit-transition: all 0.7s;
+        -moz-transition: all 0.7s;
+}
+
+    .topNav a:hover {
+        background-color: #357CC5;
+        color: white;
+        text-decoration: none;
+        transition: all 0.7s;
+            -webkit-transition: all 0.7s;
+            -moz-transition: all 0.7s;
+    }
+
+    .topNav a.active {
+        background-color: #427AB4;
+        color: white;
+    }
+
+    .rightNavigation {
+        list-style-type: none;
+        display: inline-flex;
+        text-align: center;
+        float: right;
+        margin: 0%;
+    }
+
+/*    .container-fluid, .navbar-header, .navbar-brand {
+        display: flex;    
+    }*/
+
+
+/* ---- SCROLLBAR GLOBAL ---- */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #DCDCDC; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+/* 
+........... MAIN DASHBOARD PAGE ...........
+*/
+
+
+    /* ---- IDEA LIST CSS CODE ---- */
+
+.main {
+    flex-wrap: wrap;
+}
+
+    .content {
+
+    }
+
+        .main-interface {
+            display: flex; /* THIS IS CAUSING THE VERTICAL SCROLL ISSUE AND TABLE BOTTOM BORDER */
+            float: left; /* Check this. Maybe it should be set for .addIdea */
+            width: 100%;
+            height: 100%;
+            position: fixed; /* THIS IS CAUSING THE VERTICAL SCROLL ISSUE AND TABLE BOTTOM BORDER */
+            overflow: auto;
+            height: calc(100% - 50px); /* THIS IS CAUSING THE VERTICAL SCROLL ISSUE AND TABLE BOTTOM BORDER */
+            background-color: white;
+        }   
+                    
+
+            .addIdea {                         
+                width: 60%;
+                overflow: auto;
+                background-color: white;
+                margin: 1%;
+                margin-bottom: 0%;
+                align-items: flex-start;
+                box-shadow: 0px 0px 3px #808080;
+            }
+
+
+                .addIdeaBar {
+                    width: 100%;
+                    overflow: auto;
+                    padding-top: 1%;
+                    padding-bottom: 1%;
+                    background-color: white;
+                    box-shadow: 2px 1px 5px #808080;
+                    position: -webkit-sticky;
+                    position: sticky;
+                    top: 0rem;
+                }
+
+                .addIdeaBar:hover {
+                    background-color: #F5F5F5;
+                    transition-duration: 0.30s;
+                }
+
+                    #formAddIdea {
+                        width: 100%;
+                        position: -webkit-sticky;
+                        position: sticky;
+                        top: 0;                  
+                    }
+
+                    #enterIdea {
+                        width: 92%;
+                        margin-left: 1%; 
+                        padding: 1%;
+                        background: none;
+                        border: none;
+                        outline: none;
+                    }
+
+                    #btnSubmit {
+                        width: 0%;
+                        padding: 0%;
+                        background: none;
+                        border: none;
+                        outline: none;
+                    }
+
+                        #btnSubmit:hover {
+                            transform: scale(1.1);
+                            transition-duration: 0.30s;
+                        }
+
+                .anIdea {
+                    margin-left: 0%;
+                    padding-left: 0%;
+                    margin-right: 0%;
+                    padding-right: 0%;
+                    }
+
+                    .anIdea li {
+                        flex-direction: column;
+                        list-style-type: none;
+                        font-size: 14pt;
+                        padding-top: 1%;
+                        padding-bottom: 1%;
+                        line-height: 40px;
+                        text-indent: 15px;
+                        border-bottom: 2px solid #F0F0F0; 
+                        list-style-position:inside;
+                        text-overflow: ellipsis; 
+                        white-space: nowrap;
+                        overflow: hidden;
+                        display: inline-block;
+                        display: list-item;
+                        outline: none;
+                        }
+
+                        .anIdea li:hover {
+                            background-color: #98BCDE;
+                        }
+
+                        .anIdea li.active {
+                            background-color: #98BCDE;
+                            padding-top: 15px;
+                            padding-bottom: 15px;
+                        }
+
+        /* ---- PLANNING SIDEBAR CSS CODE ---- */
+
+        .planningSidebar {
+            background-color: white;    
+            overflow-y: auto;
+            overflow-x: hidden;
+            margin: 1%;
+            margin-bottom: 0%;
+            float: right;
+            width: 60%;
+            box-shadow: 0px 0px 3px #808080;           
+        }
+
+            .sidebarHeader {
+                display: inline-block;
+                padding: 1%;
+                background-color: #A8C5E3;
+                /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 3px 20px 0 rgba(0, 0, 0, 0.19);*/
+                box-shadow: 2px 1px 5px #808080;
+                position: -webkit-sticky;
+                position: sticky;
+                top: 0rem;
+            }
+
+                .sideNameHeader {
+                    float: left;
+                    width: 100%;
+                    color: white;
+                    margin-left: 2%;
+                }
+
+                .deleteIdea {
+                    float: right;
+                    background: none;
+                    border: none;
+                    margin-right: 1%;
+                    outline: none;          
+                }
+
+                    .deleteIdea:hover {
+                        transform: scale(1.1);
+                        transition-duration: 0.30s;
+                    }
+
+
+            .sidebarSections {
+                display: flex;
+                flex-direction: column;
+            }
+                    
+                .sidebarSections h3 {
+                    font-family: helvetica, sans-serif;
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    color: #357CC5;
+                    /*font-weight: bold;*/
+                }
+
+            /* Input text elements for planning sidebar */    
+
+        #seperatorSections {
+            width: 100%;
+            height: 2px;
+            background-image: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.75), rgba(0,0,0,0.1));
+            max-width: 100%; /* fix for mobile compatibility */
+        }
+         
+        #eachSection, #seperatorSections, textarea {
+            transition: all 0.30s ease-in-out;
+        }
+
+        #eachSection:focus, #seperatorSections:focus, textarea:focus {
+            height: 15em;
+            -webkit-transition: all 0.30s ease-in-out;
+            -moz-transition: all 0.30s ease-in-out;
+            -ms-transition: all 0.30s ease-in-out;
+            -o-transition: all 0.30s ease-in-out;
+            box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+            padding: 3px 0px 3px 3px;
+            margin: 5px 1px 3px 0px;
+            border: 1px solid rgba(81, 203, 238, 1);
+        }    
+
+            #eachSection {
+                width: 100%;
+                background-color: transparent;
+                padding: 25px;
+/*                border-bottom: solid 1px;*/
+
+            }
+
+                #textEachSection {
+                    width: 100%;              
+                    background-color: transparent;
+                    border: none;
+                    resize: none;
+                    outline: none;
+                    overflow: auto;
+                }   
+
+    /* ---- FOOTER ---- */
+
+    .jumbotronFooter {
+        background-color: #FFFFFF;
+    }
+
+            .soMediaLink {
+                    display: inline-block;
+                    padding: 5px;
+                    height: 50px;
+                    width: 50px;
+                    margin: auto;
+                    vertical-align: middle;
+            }
+
+            .copyrightStatement {
+                text-align: center;
+                padding: 2%;
+            }
+
+
+/* 
+........... ACCOUNT PAGE ...........
+*/
+
+    .accountContent {
+        padding-top: 10px;
+        margin: 15px;
+        font-size: 0;
+    }
+
+    .account-interface {
+        float: center;
+        width: 65%;
+        margin: 0 auto;
+        box-shadow: 0px 0px 5px #427AB4;
+    }
+    
+    .optionsBox {
+        font-size: 16px;
+        background-color: white;
+        color: #357CC5;
+    }
+
+    .optionsBox .optionsTitleContainer {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+        background-color: #5795D5;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 20px;
+        overflow: hidden;
+        border: none;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .optionsBox .optionsTitleContainer h2 {
+        letter-spacing: 15px;
+        font-size: 35px;
+        transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+    }
+
+    .optionsBox .optionsTitleContainer h2:hover {
+        transform: scale(1.03);
+        transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+    }
+
+    .optionsBox .optionSections {
+        height: 695px;
+        overflow: auto;
+        text-align: center;
+    }
+
+    .optionSections .section {
+        font-weight: bold;
+        margin: 3%;
+    }
+
+    .optionSections .section p {
+        padding: 1%;
+    }
+
+    .optionSections .section .form-row .col {
+        display: inline-block;
+        padding: 0.5%;
+    }
+
+    .optionSections .section .form-control {
+        width: auto;
+    }
